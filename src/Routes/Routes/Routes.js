@@ -3,6 +3,7 @@ import Main from "../../layout/Main/Main";
 import Category from "../../Pages/Courses/Category/Category";
 import Courses from "../../Pages/Courses/Courses";
 import Error from "../../Pages/Error/Error";
+import SingleCourse from "../../Pages/SingleCourse/SingleCourse";
 
 
 export const route = createBrowserRouter([
@@ -18,6 +19,11 @@ export const route = createBrowserRouter([
                 path:'/courses',
                 element:<Courses></Courses>,
                 loader: ()=>fetch('https://coursely-server.vercel.app/courses')
+            },
+            {
+                path:'/course/:id',
+                element:<SingleCourse></SingleCourse>,
+                loader: ({params})=>fetch(`https://coursely-server.vercel.app/course/${params.id}`)
             },
             {
                 path:'/category/:id',

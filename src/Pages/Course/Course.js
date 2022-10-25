@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaStar, FaUserAlt } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 const Course = ({course}) => {
     return (
         <div>
@@ -12,7 +13,8 @@ const Course = ({course}) => {
                     <p className='flex justify-between'><span>Duration: {course.duration}H</span><span className='flex justify-items-center items-center'><FaStar className='mr-1'/>{course.rating}</span><span className='flex justify-items-center items-center'><FaUserAlt className='mr-1'/>{course.students}</span></p>
                     
                     <div className="card-actions justify-end">
-                        <button className="btn bg-[#00b58b] border-none">Buy Now</button>
+                        <Link to={`/course/${course.id}`}>
+                        <button className="btn bg-[#00b58b] border-none">Enroll</button></Link>
                     </div>
                 </div>
             </div>
