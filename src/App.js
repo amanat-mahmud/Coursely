@@ -7,7 +7,7 @@ function App() {
   const {isDark} = useContext(AuthContext)
   return (
 
-    <div className={isDark?'dark':null}>
+    <div className={isDark?'dark bg-black text-white':null}>
       <RouterProvider router={route}></RouterProvider>
     </div>
   );

@@ -14,9 +14,9 @@ const Courses = () => {
     return (
         <div className='grid grid-cols-1 md:grid-cols-3 md:gap-4'>
             <div className='col-span-1 ml-8'>
-                <NavLink to='/courses' className={(isActive)=>isActive?'text-[#00b58b]':'text-white'}><p className='bg-black p-5 m-5 text-center text-2xl '>All categories</p></NavLink>
+                <NavLink to='/courses'><p className='bg-black p-5 m-5 text-center text-2xl dark:bg-white text-white dark:text-black'>All categories</p></NavLink>
             {
-                allCategory.map(cat=><p className='bg-black text-2xl text-white p-5 m-5 text-center'>{cat}</p>)
+                allCategory.map((cat,idx)=><NavLink to={`/category/${idx+1}`}><p className='bg-black p-5 m-5 text-center text-white text-2xl dark:text-black dark:bg-white'>{cat}</p></NavLink>)
             }
             </div>
             <div className='col-span-1 md:col-span-2'>
