@@ -1,5 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../../layout/Main/Main";
+import Category from "../../Pages/Courses/Category/Category";
 import Courses from "../../Pages/Courses/Courses";
 import Error from "../../Pages/Error/Error";
 
@@ -17,6 +18,11 @@ export const route = createBrowserRouter([
                 path:'/courses',
                 element:<Courses></Courses>,
                 loader: ()=>fetch('https://coursely-server.vercel.app/courses')
+            },
+            {
+                path:'/category/:id',
+                element:<Category></Category>,
+                loader: ({params})=>fetch(`https://coursely-server.vercel.app/category/${params.id}`)
             },
             {
                 path:'/faq',
