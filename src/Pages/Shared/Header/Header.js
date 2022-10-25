@@ -16,15 +16,15 @@ const Header = () => {
                         <label  tabIndex="0" className="btn btn-ghost lg:hidden">
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                         </label>
-                        <ul tabIndex="0" className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+                        <ul tabIndex="0" className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52 dark:bg-black">
                             <li><Link to="/courses">Courses</Link></li>
                             <li><Link>FAQ</Link></li>
                             <li><Link>Blog</Link></li>
                             <li><Link>Log in</Link></li>
-                            <li><Link className='btn  bg-white'>Register</Link></li>
+                            <li><Link className='btn  bg-white dark:text-[#00b58b] hover:bg-[#00b58b] dark:hover:text-white'>Register</Link></li>
                         </ul>
                     </div>
-                    <img src={logo} alt="Coursely-logo" style={{width:'60px'}}></img>
+                    <Link to='/'><img src={logo} alt="Coursely-logo" style={{width:'60px'}}></img></Link>
                     <Link className="btn btn-ghost normal-case text-xl hidden md:flex">Coursely</Link>
                 </div>
                 {/* In laptop device */}

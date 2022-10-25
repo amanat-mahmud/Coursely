@@ -1,9 +1,16 @@
 import { createBrowserRouter } from "react-router-dom";
-import Header from "../../Pages/Shared/Header/Header";
+import Main from "../../layout/Main/Main";
+import Error from "../../Pages/Error/Error";
+
 
 export const route = createBrowserRouter([
     {
         path:'/',
-        element:<Header></Header>
+        element:<Main></Main>,
+        children:[{
+            path:'/courses',
+            element:<div>This is courses</div>
+        }],
+        errorElement:<Error></Error>
     }
 ]) 
