@@ -17,7 +17,7 @@ const Courses = () => {
             <div className='col-span-1 ml-8'>
                 <NavLink to='/courses'><p className='bg-black p-5 m-5 text-center text-2xl dark:bg-white text-white dark:text-black'>All categories</p></NavLink>
             {
-                allCategory.map((cat,idx)=><NavLink to={`/category/${idx+1}`} key={idx}><p className='bg-black p-5 m-5 text-center text-white text-2xl dark:text-black dark:bg-white' key={idx}>{cat}</p></NavLink>)
+                allCategory.map((cat,idx)=><NavLink to={`/category/${idx+1}`} key={idx}><p className='bg-black p-5 m-5 text-center text-white text-2xl dark:text-black dark:bg-white' key={idx} >{cat}</p></NavLink>)
             }
             </div>
             <div className='col-span-1 md:col-span-2 mt-4'>
