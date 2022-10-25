@@ -9,7 +9,7 @@ const Header = () => {
     }
     return (
         <div>
-            <div className="navbar bg-base-100">
+            <div className="navbar bg-base-100 dark:bg-black dark:text-white">
                 {/* In mobile device */}
                 <div className="navbar-start">
                     <div className="dropdown">
@@ -34,7 +34,7 @@ const Header = () => {
                         <li className='mr-1'><Link>FAQ</Link></li>
                         <li className='mr-1'><Link>Blog</Link></li>
                         <li className='mr-1'><Link>Log in</Link></li>
-                        <li className='mr-1'><Link className='btn bg-[#00b58b] border-solid border-white hover:bg-white text-white hover:text-[#00b58b]  hover:border-[#00b58b] hover:border-solid'>Register</Link></li>
+                        <li className='mr-1'><Link className='btn bg-[#00b58b] border-solid border-white hover:bg-white text-white hover:text-[#00b58b]  hover:border-[#00b58b] hover:border-solid dark:border-none'>Register</Link></li>
                     </ul>
                 </div>
                 <div className="navbar-end">
