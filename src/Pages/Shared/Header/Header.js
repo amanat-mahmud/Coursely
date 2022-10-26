@@ -26,7 +26,7 @@ const Header = () => {
                             <li><NavLink to="/faq">FAQ</NavLink></li>
                             <li><NavLink to="/blog">Blog</NavLink></li>
                             <li><NavLink to="/login">Log in</NavLink></li>
-                            <li><NavLink className='btn  bg-white dark:text-[#00b58b] hover:bg-[#00b58b] dark:hover:text-white' to='/register'>Register</NavLink></li>
+                            <li><NavLink className={({isActive})=>isActive?"btn border-solid bg-white  text-[#00b58b]  border-[#00b58b] hover:border-solid hover:text-white hover:bg-[#00b58b] hover:border-[#00b58b] dark:border-none":"btn bg-[#00b58b] border-solid border-white hover:bg-white text-white hover:text-[#00b58b]  hover:border-[#00b58b] hover:border-solid dark:border-none"}>Register</NavLink></li>
                         </ul>
                     </div>
                     <NavLink to='/'><img src={logo} alt="Coursely-logo" style={{width:'60px'}}></img></NavLink>
@@ -43,7 +43,7 @@ const Header = () => {
               isActive ? "bg-black text-white dark:bg-white dark:text-black " : undefined }>Blog</NavLink></li>
                         <li className='mr-1'><NavLink to="/login" className={({ isActive }) =>
               isActive ? "bg-black text-white dark:bg-white dark:text-black " : undefined }>Log in</NavLink></li>
-                        <li className='mr-1'><NavLink to='/register' className='btn bg-[#00b58b] border-solid border-white hover:bg-white text-white hover:text-[#00b58b]  hover:border-[#00b58b] hover:border-solid dark:border-none'>Register</NavLink></li>
+                        <li className='mr-1'><NavLink to='/register' className={({isActive})=>isActive?"btn border-solid bg-white  text-[#00b58b]  border-[#00b58b] hover:border-solid hover:text-white hover:bg-[#00b58b] hover:border-[#00b58b] dark:border-none":"btn bg-[#00b58b] border-solid border-white hover:bg-white text-white hover:text-[#00b58b]  hover:border-[#00b58b] hover:border-solid dark:border-none"}>Register</NavLink></li>
                     </ul>
                 </div>
                 <div className="navbar-end">

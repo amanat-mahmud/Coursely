@@ -17,7 +17,7 @@ const Login = () => {
                 <Link className="text-[#00b58b] underline hover:underline-offset-4">Forget Password?</Link>
             </div>
             <Link><button class="btn bg-[#00b58b] border-none w-80 mt-6">Log in</button></Link>
-            <p className='my-3'>Don't have an account?<Link className="text-[#00b58b] underline hover:underline-offset-4">Create an account</Link></p>
+            <p className='my-3'>Don't have an account?<Link className="text-[#00b58b] underline hover:underline-offset-4" to="/register">Create an account</Link></p>
             </div>
             
             <div className='my-8'>

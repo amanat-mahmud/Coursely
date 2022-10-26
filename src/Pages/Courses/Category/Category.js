@@ -20,7 +20,7 @@ const Category = () => {
     // console.log(allCategory);
     // console.log(selectedCourses);
     return (
-        <div className='grid grid-cols-1 md:grid-cols-2 md:gap-4'>
+        <div className='grid grid-cols-1 md:grid-cols-2 md:gap-4 mb-4'>
             <div className='col-span-1 ml-8'>
                 <NavLink to='/courses'><p className='bg-black p-5 m-5 text-center text-2xl dark:bg-white text-white dark:text-black'>All categories</p></NavLink>
             {

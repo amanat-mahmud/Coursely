@@ -30,7 +30,7 @@ const SingleCourse = () => {
                             <p key={idx} className="flex"><FaAngleRight className='mt-1'/>{learn}</p>)
                         }
                     </div>
-                    <div>
+                    <div className='mb-3'>
                     <p className='text-3xl'>Requirements</p>
                         {
                             course.requirements.map((req,idx)=><p key={idx} className="flex"><FaAngleRight className='mt-1'/>{req}</p>)
