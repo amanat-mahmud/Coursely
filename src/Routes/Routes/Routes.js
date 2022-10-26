@@ -3,9 +3,11 @@ import Main from "../../layout/Main/Main";
 import Category from "../../Pages/Courses/Category/Category";
 import Courses from "../../Pages/Courses/Courses";
 import Error from "../../Pages/Error/Error";
+import Login from "../../Pages/Sign In/Login/Login";
 import SingleCourse from "../../Pages/SingleCourse/SingleCourse";
-
-
+import Register from "../../Pages/Sign In/Register/Register"
+import FAQ from "../../Pages/FAQ/FAQ"
+import Blog from "../../Pages/Blog/Blog"
 export const route = createBrowserRouter([
     {
         path:'/',
@@ -32,19 +34,19 @@ export const route = createBrowserRouter([
             },
             {
                 path:'/faq',
-                element:<div>This is faq</div>
+                element:<FAQ></FAQ>
             },
             {
                 path:'/blog',
-                element:<div>This is blog</div>
+                element:<Blog></Blog>
             },
             {
                 path:'/login',
-                element:<div>This is log in</div>
+                element:<Login></Login>
             },
             {
                 path:'/register',
-                element:<div>This is register</div>
+                element:<Register></Register>
             },
     ],
         errorElement:<Error></Error>
