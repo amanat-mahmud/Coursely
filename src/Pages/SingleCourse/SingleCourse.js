@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 import { FaStar, FaUserAlt, FaAngleRight, FaStop } from 'react-icons/fa';
+import { AuthContext } from '../../context/Auth/AuthProvider';
 
 const SingleCourse = () => {
     const course = useLoaderData();
     // console.log(course);
+    const {setPrice} = useContext(AuthContext);
     return (
         <div>
             {/* <div className='grid grid-cols-1 md:grid-cols-2 md:gap-4'> */}
@@ -45,7 +47,7 @@ const SingleCourse = () => {
                         }
                     </div>
                 <div className='mb-5 text-center'>
-                <Link to='/checkout'><button className="btn bg-[#00b58b] border-none  dark:hover:text-[#00b58b] dark:hover:bg-white">Checkout</button></Link>
+                <Link to='/checkout'><button className="btn bg-[#00b58b] border-none  dark:hover:text-[#00b58b] dark:hover:bg-white" onClick={()=>setPrice(course.price)}>Checkout</button></Link>
                 </div>
                 </div>
             </div>

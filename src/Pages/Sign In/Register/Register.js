@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom';
 import googleImg from "../../../assets/images/google.png"
 const register = () => {
     return (
-        <div className=''>
+        <div >
+            <form >
             <div className='md:mx-auto text-center mt-20 border md:w-2/5 py-5'>
                 <h1 className='text-5xl font-bold mb-5'>Create an account</h1>
                 <input type="text" name='name' placeholder="Full name" className="input input-bordered w-full max-w-xs mb-5" required /><br></br>
@@ -16,6 +17,7 @@ const register = () => {
                 <Link><button className="btn bg-[#00b58b] border-none w-80 mt-6">Create an account</button></Link>
                 <p className='my-3'>Already have an account?<Link className="text-[#00b58b] underline hover:underline-offset-4" to="/login">Log in</Link></p>
             </div>
+            </form>
 
             <div className='my-8'>
                 <div className='flex justify-start mx-auto border rounded-2xl md:w-2/5 p-2'>
