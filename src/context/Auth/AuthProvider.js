@@ -1,5 +1,5 @@
 import React, { createContext, useEffect, useState } from 'react';
-import {createUserWithEmailAndPassword, getAuth, GithubAuthProvider, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut} from "firebase/auth"
+import {createUserWithEmailAndPassword, getAuth, GithubAuthProvider, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateCurrentUser, updateProfile} from "firebase/auth"
 import app from "../../firebase/firebase.config"
 export const AuthContext = createContext();
 const auth = getAuth(app);
@@ -29,7 +29,10 @@ const gitProvider = new GithubAuthProvider();
     const logOut =  () =>{
         return signOut(auth)
     }
-
+    const updateUser = (name,photo) =>{
+        return updateProfile(auth.currentUser, {
+            displayName: name, photoURL: photo
+          })}
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (currentUser) => { setUser(currentUser);
             setLoading(false);
@@ -44,7 +47,8 @@ const gitProvider = new GithubAuthProvider();
 
 
     const authInfo = {user,setUser,setDark,isDark,price,logInWithEmail,
-        setPrice,loading,createUser,signInWithGoogle,signInWithGitHub,logOut}
+        setPrice,loading,createUser,signInWithGoogle,signInWithGitHub,logOut,
+        updateUser,setLoading}
     return (
         <div>
             <AuthContext.Provider

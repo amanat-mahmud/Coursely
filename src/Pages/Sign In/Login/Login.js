@@ -1,10 +1,14 @@
 import React, { useContext } from 'react';
 import { FaGithub } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import googleImg from "../../../assets/images/google.png"
 import { AuthContext } from '../../../context/Auth/AuthProvider';
 const Login = () => {
     const {signInWithGoogle,signInWithGitHub,logInWithEmail,setLoading} = useContext(AuthContext)
+    // const location = useLocation();
+    const navigate = useNavigate();
+    // location.state.from.pathname ||
+    const from =  "/"
     const handleOnSubmit = (event) =>{
         event.preventDefault();
         const form = event.target;
@@ -13,7 +17,10 @@ const Login = () => {
         //console.log(email, password);
         // console.log("clicked");
         logInWithEmail(email,password)
-        .then(res=>setLoading(false))
+        .then(res=>{setLoading(false);
+            console.log(res.user);
+        navigate(from,{replace:true})
+        })
         .catch(error=>console.log(error.message))
     }
     const handleOnClickGoogle = () => {

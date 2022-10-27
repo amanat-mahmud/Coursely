@@ -1,10 +1,11 @@
 import React, { useContext, useState } from 'react';
 import { FaGithub } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import googleImg from "../../../assets/images/google.png"
 import { AuthContext } from '../../../context/Auth/AuthProvider';
 const Register = () => {
-    const {createUser,signInWithGoogle,signInWithGitHub,setLoading} = useContext(AuthContext);
+    const {createUser,signInWithGoogle,signInWithGitHub,setLoading,updateUser} = useContext(AuthContext);
+    const navigate = useNavigate();
     const [error,setError] = useState(null)
     const handleOnSubmit = (event) =>{
         event.preventDefault();
@@ -16,8 +17,14 @@ const Register = () => {
         const photo = form.photo.value;
         console.log(email, password,name,photo);
         createUser(email,password)
-        .then(res=>{console.log(res.user)
-        setLoading(false)})
+        .then(res=>{console.log(res.user);
+        setLoading(false);
+        updateUser(name,photo)
+        .then(()=>{console.log("updated")
+        navigate('/courses');
+    })
+        .catch()
+    })
         .catch(error=>setError(error.message))
         // console.log("clicked");
     }
