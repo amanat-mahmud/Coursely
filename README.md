@@ -3,18 +3,30 @@
 
 - 🔭 I’m currently working on [Coursely](http://localhost:3000/courses)
 
-<h3 align="left">Description:</h3>
+<h2 align="left">📝Description:</h2>
 <p align="left">
-1.This is a online educational website.
+1.This is an online CSE educational course website.
 </p>
 <p align="left">
-2.In this website you can enroll courses you like.
+2.In this website, you can enroll courses you like.You can search courses by category.There is also a details page for every course.
 </p>
 <p align="left">
-3.To buy any course you must be logged in.
+3.To buy any course you must be logged in.There is also a checkout page with pricing details.
 </p>
 <p align="left">
-4.To buy any course you must be logged in.
+4.After logging in you get a profile section. You can  update your profile in that section.
+</p>
+<p align="left">
+5.Whole website is responsive.
+</p>
+<p align="left">
+6.Has dark and white theme.
+</p>
+<p align="left">
+7.There is FAQ and blog section.
+</p>
+<p align="left">
+8.Can login and register using google and github account besides email and password.
 </p>
 
 <h3 align="left">Languages and Tools:</h3>
