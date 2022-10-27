@@ -1,10 +1,8 @@
-import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
-import { AuthContext } from '../../context/Auth/AuthProvider';
-
+import { Link, useLoaderData } from 'react-router-dom';
 const Checkout = () => {
-    const {price} = useContext(AuthContext);
-    // console.log(price);
+    const course = useLoaderData();
+    const price = course.price;
+    // console.log(course);
     return (
         <div>
             <div>
@@ -16,6 +14,10 @@ const Checkout = () => {
                         <h1 className="text-2xl  dark:text-white  font-semibold leading-6 text-gray-800">Order Summary</h1>
                     </div>
                     <div className="flex mt-7 flex-col items-end w-full space-y-6">
+                        <div className="flex justify-between w-full items-center">
+                            <p className="text-lg dark:text-gray-300 leading-4 text-gray-600 font-bold">Course</p>
+                            <p className="text-lg dark:text-gray-300 font-semibold leading-4 text-gray-600">{course.title}</p>
+                        </div>
                         <div className="flex justify-between w-full items-center">
                             <p className="text-lg dark:text-gray-300 leading-4 text-gray-600">Total items</p>
                             <p className="text-lg dark:text-gray-300 font-semibold leading-4 text-gray-600">1</p>

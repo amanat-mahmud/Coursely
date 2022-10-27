@@ -53,8 +53,9 @@ export const route = createBrowserRouter([
                 element:<Register></Register>
             },
             {
-                path:'/checkout',
-                element:<PrivateRoute><Checkout></Checkout></PrivateRoute>
+                path:'/checkout/:id',
+                element:<PrivateRoute><Checkout></Checkout></PrivateRoute>,
+                loader:({params})=>fetch(`https://coursely-server.vercel.app/course/${params.id}`)
             },
             {
                 path:'/profile',

@@ -1,5 +1,5 @@
 import React, { createContext, useEffect, useState } from 'react';
-import {createUserWithEmailAndPassword, getAuth, GithubAuthProvider, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateCurrentUser, updateProfile} from "firebase/auth"
+import {createUserWithEmailAndPassword, getAuth, GithubAuthProvider, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile} from "firebase/auth"
 import app from "../../firebase/firebase.config"
 export const AuthContext = createContext();
 const auth = getAuth(app);
@@ -8,7 +8,6 @@ const gitProvider = new GithubAuthProvider();
  const AuthProvider = ({children}) => {
     const [user,setUser] = useState(null);
     const [isDark,setDark]= useState(false);
-    const [price,setPrice]= useState(0);
     const [loading,setLoading] = useState(true);
     const [dispLastName,setdispLastName] = useState(null);
     const createUser = (email, password) => {
@@ -48,8 +47,8 @@ const gitProvider = new GithubAuthProvider();
 
 
 
-    const authInfo = {user,setUser,setDark,isDark,price,logInWithEmail,
-        setPrice,loading,createUser,signInWithGoogle,signInWithGitHub,logOut,
+    const authInfo = {user,setUser,setDark,isDark,logInWithEmail,
+        loading,createUser,signInWithGoogle,signInWithGitHub,logOut,
         updateUser,setLoading,dispLastName,setdispLastName}
     return (
         <div>

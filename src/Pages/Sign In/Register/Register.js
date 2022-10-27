@@ -59,11 +59,11 @@ const Register = () => {
                 dark:hover:bg-white  dark:hover:text-black hover:text-white'
                 onClick={handleOnClickGoogle}>
                     <img src={googleImg} alt="Google icon" style={{width:'26px'}}/>
-                    <p className='text-xl font-bold mr-24'>Continue with google</p>
+                    <p className='text-xl font-bold md:mr-24'>Continue with google</p>
                 </button>
                 <button className='btn bg-white text-black flex mx-auto border-black dark:border-white  dark:bg-black dark:text-white rounded-2xl md:w-2/5 p-2 mt-5 justify-between dark:hover:bg-white  dark:hover:text-black hover:text-white' onClick={handleOnClickGitHub}>
                     <FaGithub className='text-3xl '/>
-                    <p className='text-xl font-bold mr-24'>Continue with github</p>
+                    <p className='text-xl font-bold md:mr-24'>Continue with github</p>
                 </button>
             </div>
         </div>

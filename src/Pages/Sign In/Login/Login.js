@@ -1,19 +1,20 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { FaGithub } from 'react-icons/fa';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import googleImg from "../../../assets/images/google.png"
 import { AuthContext } from '../../../context/Auth/AuthProvider';
 const Login = () => {
-    const {signInWithGoogle,signInWithGitHub,logInWithEmail,setLoading} = useContext(AuthContext)
+    const {signInWithGoogle,signInWithGitHub,logInWithEmail,setLoading,} = useContext(AuthContext)
     const location = useLocation();
     const navigate = useNavigate();
-    // location.state.from.pathname ||
+    const [error,setError] = useState(null);
     const from =  location?.state?.from?.pathname || "/";
     const handleOnSubmit = (event) =>{
         event.preventDefault();
         const form = event.target;
         const email = form.email.value;
         const password = form.password.value;
+        setError(null);
         //console.log(email, password);
         // console.log("clicked");
         logInWithEmail(email,password)
@@ -21,7 +22,7 @@ const Login = () => {
             console.log(res.user);
         navigate(from,{replace:true})
         })
-        .catch(error=>console.log(error.message))
+        .catch(error=>setError(error.message))
     }
     const handleOnClickGoogle = () => {
         signInWithGoogle()
@@ -51,22 +52,22 @@ const Login = () => {
                             <p>Remeber me</p>
                         </div>
                         <Link className="text-[#00b58b] underline hover:underline-offset-4">Forget Password?</Link>
-                    </div>
+                    </div><p className='text-red-500'>{error}</p>
                     <button className="btn bg-[#00b58b] border-none w-80 mt-6" type="submit">Log in</button>
                     <p className='my-3'>Don't have an account?<Link className="text-[#00b58b] underline hover:underline-offset-4" to="/register">Create an account</Link></p>
                     </form>
                 </div>
             
             <div className='my-8'>
-                <button className='flex justify-between mx-auto border-black dark:border-white rounded-2xl md:w-2/5 p-2 btn bg-white text-black dark:bg-black dark:text-white
-                dark:hover:bg-white  dark:hover:text-black hover:text-white'
+                <button className='flex md:justify-between mx-auto border-black dark:border-white rounded-2xl md:w-2/5 p-2 btn bg-white text-black dark:bg-black dark:text-white
+                dark:hover:bg-white  dark:hover:text-black hover:text-white '
                 onClick={handleOnClickGoogle}>
                     <img src={googleImg} alt="Google icon" style={{ width: '26px' }} />
-                    <p className='text-xl font-bold mr-24'>Continue with google</p>
+                    <p className='text-xl font-bold md:mr-24 '>Continue with google</p>
                 </button>
                 <button className='btn bg-white text-black flex mx-auto border-black dark:border-white  dark:bg-black dark:text-white rounded-2xl md:w-2/5 p-2 mt-5 justify-between dark:hover:bg-white  dark:hover:text-black hover:text-white' onClick={handleOnClickGitHub}>
                     <FaGithub className='text-3xl ' />
-                    <p className='text-xl font-bold mr-24'>Continue with github</p>
+                    <p className='text-xl font-bold md:mr-24'>Continue with github</p>
                 </button>
             </div>
         </div>
