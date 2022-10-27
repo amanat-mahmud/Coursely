@@ -41,12 +41,12 @@ const Register = () => {
     return (
         <div >
             <form onSubmit={handleOnSubmit}>
-            <div className='md:mx-auto text-center mt-20 border md:w-2/5 py-5'>
+            <div className='md:mx-auto text-center mt-20 border md:w-2/5 py-5 '>
                 <h1 className='text-5xl font-bold mb-5'>Create an account</h1>
-                <input type="text" name='name' placeholder="Full name" className="input input-bordered w-full max-w-xs mb-5" required /><br></br>
-                <input type="text" name='photo' placeholder="Photo URL" className="input input-bordered w-full max-w-xs mb-5" required /><br></br>
-                <input type="email" name='email' placeholder="Email" className="input input-bordered w-full max-w-xs mb-5" required /><br></br>
-                <input type="password" name='password' placeholder="Password" className="input input-bordered w-full max-w-xs" required />
+                <input type="text" name='name' placeholder="Full name" className="input input-bordered w-full max-w-xs mb-5 text-black" required /><br></br>
+                <input type="text" name='photo' placeholder="Photo URL" className="input input-bordered w-full max-w-xs mb-5 text-black" required /><br></br>
+                <input type="email" name='email' placeholder="Email" className="input input-bordered w-full max-w-xs mb-5 text-black" required /><br></br>
+                <input type="password" name='password' placeholder="Password" className="input input-bordered w-full max-w-xs text-black" required />
                 <div className='flex mx-12 my-3 justify-around'>
                 </div><p className='text-red-500'>{error}</p>
                 <button className="btn bg-[#00b58b] border-none w-80 mt-6" type='submit'>Create an account</button>

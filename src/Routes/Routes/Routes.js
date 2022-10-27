@@ -10,6 +10,7 @@ import FAQ from "../../Pages/FAQ/FAQ"
 import Blog from "../../Pages/Blog/Blog"
 import Home from "../../Pages/Home/Home";
 import Checkout from "../../Pages/Checkout/Checkout";
+import Profile from "../../Pages/Profile/Profile";
 export const route = createBrowserRouter([
     {
         path:'/',
@@ -53,6 +54,10 @@ export const route = createBrowserRouter([
             {
                 path:'/checkout',
                 element:<Checkout></Checkout>
+            },
+            {
+                path:'/profile',
+                element:<Profile></Profile>
             },
     ],
         errorElement:<Error></Error>

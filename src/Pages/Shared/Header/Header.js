@@ -1,11 +1,12 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMoon, faSun, faUserGraduate } from '@fortawesome/free-solid-svg-icons'
 import React, { useContext } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import logo from '../../../assets/images/coursely.png';
 import { AuthContext } from '../../../context/Auth/AuthProvider';
 const Header = () => {
     const { isDark, setDark, user, logOut } = useContext(AuthContext);
+    const navigate = useNavigate();
     const handleToggleClick = () => {
         setDark(!isDark);
         // console.log(isDark)
@@ -15,6 +16,9 @@ const Header = () => {
         logOut()
         .then()
         .catch()
+    }
+    const handleUserProfile = () =>{
+        navigate('/profile')
     }
     return (
         <div>
@@ -59,8 +63,8 @@ const Header = () => {
                 </div>
                 <div className="navbar-end">
                     {
-                        user?.photoURL?<><img src={user.photoURL} alt
-                        ="User" style={{ width: '60px' }} className='mr-2 lg:mr-10 tooltip tooltip-bottom' data-tip={user.displayName}></img></>:<span className='mr-2 lg:mr-10 tooltip tooltip-bottom' data-tip="user"><FontAwesomeIcon icon={faUserGraduate} style={{ fontSize: '25px' }}></FontAwesomeIcon></span>
+                        user?.photoURL?<><img src={user?.photoURL} alt
+                        ="User" style={{ width: '60px',borderRadius:"50%" }} className='mr-2 lg:mr-10 tooltip tooltip-bottom' data-tip={user.displayName} onClick={handleUserProfile}></img></>:<span className='mr-2 lg:mr-10 tooltip tooltip-bottom' data-tip="user"><FontAwesomeIcon icon={faUserGraduate} style={{ fontSize: '25px' }}></FontAwesomeIcon></span>
                     }
                     <span><FontAwesomeIcon icon={faSun} style={{ fontSize: '20px' }}
                     ></FontAwesomeIcon></span>

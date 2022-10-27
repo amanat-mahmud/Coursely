@@ -43,8 +43,8 @@ const Login = () => {
                 <div className='md:mx-auto text-center mt-20 border md:w-2/5 py-5'>
                     <h1 className='text-5xl font-bold mb-5'>Login</h1>
                     <form onSubmit={handleOnSubmit}>
-                    <input type="email" name='email' placeholder="Email" className="input input-bordered w-full max-w-xs mb-5" required /><br></br>
-                    <input type="password" name='password' placeholder="Password" className="input input-bordered w-full max-w-xs" required />
+                    <input type="email" name='email' placeholder="Email" className="input input-bordered w-full max-w-xs mb-5 text-black" required /><br></br>
+                    <input type="password" name='password' placeholder="Password" className="input input-bordered w-full max-w-xs text-black" required />
                     <div className='flex mx-12 my-3 justify-around'>
                         <div className='flex'>
                             <input type="checkbox" className="checkbox mr-1 dark:checkbox-accent" />

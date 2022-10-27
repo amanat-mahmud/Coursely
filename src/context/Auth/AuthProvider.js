@@ -10,6 +10,7 @@ const gitProvider = new GithubAuthProvider();
     const [isDark,setDark]= useState(false);
     const [price,setPrice]= useState(0);
     const [loading,setLoading] = useState(true);
+    const [dispLastName,setdispLastName] = useState(null);
     const createUser = (email, password) => {
         setLoading(true);
         return createUserWithEmailAndPassword(auth, email, password)
@@ -34,7 +35,8 @@ const gitProvider = new GithubAuthProvider();
             displayName: name, photoURL: photo
           })}
     useEffect(() => {
-        const unsubscribe = onAuthStateChanged(auth, (currentUser) => { setUser(currentUser);
+        const unsubscribe = onAuthStateChanged(auth, (currentUser) => 
+        { setUser(currentUser);
             setLoading(false);
         });
 
@@ -48,7 +50,7 @@ const gitProvider = new GithubAuthProvider();
 
     const authInfo = {user,setUser,setDark,isDark,price,logInWithEmail,
         setPrice,loading,createUser,signInWithGoogle,signInWithGitHub,logOut,
-        updateUser,setLoading}
+        updateUser,setLoading,dispLastName,setdispLastName}
     return (
         <div>
             <AuthContext.Provider
