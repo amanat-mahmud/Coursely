@@ -4,6 +4,7 @@ import React from 'react';
 const Blog = () => {
     return (
         <div>
+            {/* blog 1 */}
             <div className='mx-20 my-10 border rounded-2xl dark:border-black dark:text-black'>
                 <div className="card bg-base-100 shadow-xl">
                     <div className="card-body">
@@ -12,6 +13,7 @@ const Blog = () => {
                     </div>
                 </div>
             </div>
+            {/* blog 2 */}
             <div className='mx-20 mb-10 border rounded-2xl
             dark:border-black dark:text-black'>
                 <div className="card bg-base-100 shadow-xl">
@@ -21,6 +23,7 @@ const Blog = () => {
                     </div>
                 </div>
             </div>
+            {/* blog 3 */}
             <div className='mx-20 mb-10 border rounded-2xl
             dark:border-black dark:text-black'>
                 <div className="card bg-base-100 shadow-xl">
@@ -30,6 +33,7 @@ const Blog = () => {
                     </div>
                 </div>
             </div>
+            {/* blog 4 */}
             <div className='mx-20 mb-10 border rounded-2xl
             dark:border-black dark:text-black'>
                 <div className="card bg-base-100 shadow-xl">

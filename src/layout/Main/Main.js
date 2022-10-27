@@ -6,6 +6,7 @@ import Header from '../../Pages/Shared/Header/Header';
 const Main = () => {
     return (
         <div>
+            {/* layout of all of my webpage */}
             <Header></Header>
             <Outlet></Outlet>
             <Footer></Footer>
