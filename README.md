@@ -1,7 +1,7 @@
 <h1 align="center">Hi 👋, I'm Amanat</h1>
 <h3 align="center">A passionate full stack web developer from Bangladesh</h3>
 
-- 👨‍💻 I’m currently working on [Coursely](https://coursely-client.web.app/)
+- 👨‍💻 I’m currently working on [Coursely](https://coursely-client.web.app)
 
 <h2 align="left">📝Description:</h2>
 <p align="left">
