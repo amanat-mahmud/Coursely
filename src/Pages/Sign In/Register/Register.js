@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import googleImg from "../../../assets/images/google.png"
 import { AuthContext } from '../../../context/Auth/AuthProvider';
 const Register = () => {
-    const {createUser} = useContext(AuthContext);
+    const {createUser,signInWithGoogle,signInWithGitHub,setLoading} = useContext(AuthContext);
     const [error,setError] = useState(null)
     const handleOnSubmit = (event) =>{
         event.preventDefault();
@@ -16,9 +16,20 @@ const Register = () => {
         const photo = form.photo.value;
         console.log(email, password,name,photo);
         createUser(email,password)
-        .then(res=>console.log(res.user))
+        .then(res=>{console.log(res.user)
+        setLoading(false)})
         .catch(error=>setError(error.message))
         // console.log("clicked");
+    }
+    const handleOnClickGoogle = () => {
+        signInWithGoogle()
+        .then(()=>setLoading(false))
+        .catch(error=>console.log(error.message))
+    }
+    const handleOnClickGitHub = () =>{
+        signInWithGitHub()
+        .then(()=>setLoading(false))
+        .catch(error=>console.log(error.message))
     }
     return (
         <div >
@@ -38,11 +49,12 @@ const Register = () => {
 
             <div className='my-8'>
                 <button className='flex justify-between mx-auto border-black dark:border-white rounded-2xl md:w-2/5 p-2 btn bg-white text-black dark:bg-black dark:text-white
-                dark:hover:bg-white  dark:hover:text-black hover:text-white'>
+                dark:hover:bg-white  dark:hover:text-black hover:text-white'
+                onClick={handleOnClickGoogle}>
                     <img src={googleImg} alt="Google icon" style={{width:'26px'}}/>
                     <p className='text-xl font-bold mr-24'>Continue with google</p>
                 </button>
-                <button className='btn bg-white text-black flex mx-auto border-black dark:border-white  dark:bg-black dark:text-white rounded-2xl md:w-2/5 p-2 mt-5 justify-between dark:hover:bg-white  dark:hover:text-black hover:text-white' onClick={()=>{console.log("clicked")}}>
+                <button className='btn bg-white text-black flex mx-auto border-black dark:border-white  dark:bg-black dark:text-white rounded-2xl md:w-2/5 p-2 mt-5 justify-between dark:hover:bg-white  dark:hover:text-black hover:text-white' onClick={handleOnClickGitHub}>
                     <FaGithub className='text-3xl '/>
                     <p className='text-xl font-bold mr-24'>Continue with github</p>
                 </button>
