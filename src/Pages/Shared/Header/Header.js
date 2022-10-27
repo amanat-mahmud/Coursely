@@ -31,8 +31,11 @@ const Header = () => {
                                 to="/courses">Courses</NavLink></li>
                             <li><NavLink to="/faq">FAQ</NavLink></li>
                             <li><NavLink to="/blog">Blog</NavLink></li>
-                            <li><NavLink to="/login">Log in</NavLink></li>
-                            <li><NavLink className={({ isActive }) => isActive ? "btn border-solid bg-white  text-[#00b58b]  border-[#00b58b] hover:border-solid hover:text-white hover:bg-[#00b58b] hover:border-[#00b58b] dark:border-none" : "btn bg-[#00b58b] border-solid border-white hover:bg-white text-white hover:text-[#00b58b]  hover:border-[#00b58b] hover:border-solid dark:border-none"}>Register</NavLink></li>
+                            {
+                            user?.photoURL ? <><li className='mr-1'><NavLink className="btn border-solid bg-white  text-[#00b58b]  border-[#00b58b] hover:border-solid hover:text-white hover:bg-[#00b58b] hover:border-[#00b58b] dark:border-none" onClick={handleLogout}>Log out</NavLink></li></> : <> <li className='mr-1'><NavLink to="/login" className={({ isActive }) =>
+                                    isActive ? "bg-black text-white dark:bg-white dark:text-black " : undefined}>Log in</NavLink></li>
+                                <li className='mr-1'><NavLink to='/register' className={({ isActive }) => isActive ? "btn border-solid bg-white  text-[#00b58b]  border-[#00b58b] hover:border-solid hover:text-white hover:bg-[#00b58b] hover:border-[#00b58b] dark:border-none" : "btn bg-[#00b58b] border-solid border-white hover:bg-white text-white hover:text-[#00b58b]  hover:border-[#00b58b] hover:border-solid dark:border-none"}>Register</NavLink></li></>
+                        }
                         </ul>
                     </div>
                     <NavLink to='/'><img src={logo} alt="Coursely-logo" style={{ width: '60px' }}></img></NavLink>
@@ -55,7 +58,10 @@ const Header = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <span className='mr-2 lg:mr-10 tooltip tooltip-bottom' data-tip="user"><FontAwesomeIcon icon={faUserGraduate} style={{ fontSize: '25px' }}></FontAwesomeIcon></span>
+                    {
+                        user?.photoURL?<><img src={user.photoURL} alt
+                        ="User" style={{ width: '60px' }} className='mr-2 lg:mr-10 tooltip tooltip-bottom' data-tip={user.displayName}></img></>:<span className='mr-2 lg:mr-10 tooltip tooltip-bottom' data-tip="user"><FontAwesomeIcon icon={faUserGraduate} style={{ fontSize: '25px' }}></FontAwesomeIcon></span>
+                    }
                     <span><FontAwesomeIcon icon={faSun} style={{ fontSize: '20px' }}
                     ></FontAwesomeIcon></span>
                     <input type="checkbox" className="toggle toggle-md mx-2" onClick={handleToggleClick} />
