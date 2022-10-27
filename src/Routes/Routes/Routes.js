@@ -11,6 +11,7 @@ import Blog from "../../Pages/Blog/Blog"
 import Home from "../../Pages/Home/Home";
 import Checkout from "../../Pages/Checkout/Checkout";
 import Profile from "../../Pages/Profile/Profile";
+import PrivateRoute from "../PrivateRoute/PrivateRoute";
 export const route = createBrowserRouter([
     {
         path:'/',
@@ -53,7 +54,7 @@ export const route = createBrowserRouter([
             },
             {
                 path:'/checkout',
-                element:<Checkout></Checkout>
+                element:<PrivateRoute><Checkout></Checkout></PrivateRoute>
             },
             {
                 path:'/profile',

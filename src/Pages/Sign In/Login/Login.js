@@ -5,10 +5,10 @@ import googleImg from "../../../assets/images/google.png"
 import { AuthContext } from '../../../context/Auth/AuthProvider';
 const Login = () => {
     const {signInWithGoogle,signInWithGitHub,logInWithEmail,setLoading} = useContext(AuthContext)
-    // const location = useLocation();
+    const location = useLocation();
     const navigate = useNavigate();
     // location.state.from.pathname ||
-    const from =  "/"
+    const from = location.state.from.pathname || "/"
     const handleOnSubmit = (event) =>{
         event.preventDefault();
         const form = event.target;

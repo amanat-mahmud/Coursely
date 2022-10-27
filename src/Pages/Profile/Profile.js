@@ -17,7 +17,7 @@ const Profile = () => {
     }
     return (
         <div className="md:mx-80 dark:border-2 dark:border-white mb-5 ">
-            <img src={user?.photoURL} alt="user" style={{borderRadius:"50%"}}></img>
+            <img src={user?.photoURL} alt="user" style={{borderRadius:"50%"}} className="px-5 pt-5"></img>
             <form onSubmit={handleUpdate}>
             <div className="w-full bg-white p-10  dark:bg-black dark:text-white">
                 <h1 tabIndex={0}  aria-label="profile information" className="focus:outline-none text-3xl font-bold text-gray-800 mt-12 dark:text-white">
