@@ -63,9 +63,10 @@ const Header = () => {
                 </div>
                 <div className="navbar-end">
                     {
-                        user?.photoURL?<><img src={user?.photoURL} alt
-                        ="User" style={{ width: '60px',borderRadius:"50%" }} className='mr-2 lg:mr-10 tooltip tooltip-bottom' 
-                        data-tip={user?.displayName} onClick={handleUserProfile}></img></>:<span className='mr-2 lg:mr-10 tooltip tooltip-bottom' data-tip="user"><FontAwesomeIcon icon={faUserGraduate} style={{ fontSize: '25px' }}></FontAwesomeIcon></span>
+                        user?.photoURL?<span className='tooltip tooltip-bottom'
+                        data-tip={user?.displayName}>
+                            <img src={user?.photoURL} alt
+                        ="User" style={{ width: '60px',borderRadius:"50%" }} className='mr-2 lg:mr-10' onClick={handleUserProfile}></img></span>:<span className='mr-2 lg:mr-10 tooltip tooltip-bottom' data-tip="user"><FontAwesomeIcon icon={faUserGraduate} style={{ fontSize: '25px' }}></FontAwesomeIcon></span>
                     }
                     <span><FontAwesomeIcon icon={faSun} style={{ fontSize: '20px' }}
                     ></FontAwesomeIcon></span>
