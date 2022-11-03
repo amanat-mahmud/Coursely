@@ -38,6 +38,30 @@ const Register = () => {
         .then(()=>setLoading(false))
         .catch(error=>console.log(error.message))
     }
+    const handlePassword = (event)=>{
+        const typedpassword = event.target.value;
+        // .{8,} means minimum length = 8
+        // ! is given because the condition will be true if the length is not 8
+        // same goest for all other condition(else if)
+        if(!/.{8,}/.test(typedpassword)){
+            setError("Password must be of atleast 8 characters")
+        }
+        else if(!/(?=.*?[A-Z])/.test(typedpassword)){
+            setError("Password must contain one uppercase letter")
+        }
+        else if(!/(?=.*?[a-z])/.test(typedpassword)){
+            setError("Password must contain one lowercase letter")
+        }
+        else if(!/(?=.*?[0-9])/.test(typedpassword)){
+            setError("Password must contain one digit")
+        }
+        else if(!/(?=.*?[#?!@$%^&*-])/.test(typedpassword)){
+            setError("Password must contain one special character")
+        }
+        else{
+            setError(null);
+        }
+    }
     return (
         <div >
             <form onSubmit={handleOnSubmit}>
@@ -46,7 +70,7 @@ const Register = () => {
                 <input type="text" name='name' placeholder="Full name" className="input input-bordered w-full max-w-xs mb-5 text-black" required /><br></br>
                 <input type="text" name='photo' placeholder="Photo URL" className="input input-bordered w-full max-w-xs mb-5 text-black" required /><br></br>
                 <input type="email" name='email' placeholder="Email" className="input input-bordered w-full max-w-xs mb-5 text-black" required /><br></br>
-                <input type="password" name='password' placeholder="Password" className="input input-bordered w-full max-w-xs text-black" required />
+                <input type="password" name='password' placeholder="Password" className="input input-bordered w-full max-w-xs text-black" required onChange={handlePassword}/>
                 <div className='flex mx-12 my-3 justify-around'>
                 </div><p className='text-red-500'>{error}</p>
                 <button className="btn bg-[#00b58b] border-none w-80 mt-6" type='submit'>Create an account</button>
