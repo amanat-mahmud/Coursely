@@ -5,10 +5,11 @@ const Course = ({course}) => {
     return (
         <div>
             {/* single course container of courses page */}
-            <div className="card card-compact w-96 bg-base-100 shadow-xl">
+            <div className="card card-compact w-96 bg-base-100 shadow-xl m-0
+            border border-white mx-auto">
                 {/* Course image */}
                 <figure><img src={course.img} alt="Shoes" style={{width:'380px',height:'220px'}}/></figure>
-                <div className="card-body dark:bg-slate-500" style={{height:'252px'}}>
+                <div className="card-body dark:bg-black " style={{height:'252px'}}>
                     {/* Course title */}
                     <h2 className="card-title">{course.title}'</h2>
                     {/* Author information */}

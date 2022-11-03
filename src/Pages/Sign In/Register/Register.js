@@ -41,7 +41,7 @@ const Register = () => {
     return (
         <div >
             <form onSubmit={handleOnSubmit}>
-            <div className='md:mx-auto text-center mt-20 border md:w-2/5 py-5 '>
+            <div className='md:mx-auto text-center mt-20 border md:w-2/5 py-5 m-2'>
                 <h1 className='text-5xl font-bold mb-5'>Create an account</h1>
                 <input type="text" name='name' placeholder="Full name" className="input input-bordered w-full max-w-xs mb-5 text-black" required /><br></br>
                 <input type="text" name='photo' placeholder="Photo URL" className="input input-bordered w-full max-w-xs mb-5 text-black" required /><br></br>

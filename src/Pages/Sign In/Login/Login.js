@@ -41,7 +41,8 @@ const Login = () => {
     return (
         <div >
             
-                <div className='md:mx-auto text-center mt-20 border md:w-2/5 py-5'>
+                <div className='md:mx-auto text-center mt-20 border md:w-2/5 py-5
+                mx-2'>
                     <h1 className='text-5xl font-bold mb-5'>Login</h1>
                     <form onSubmit={handleOnSubmit}>
                     <input type="email" name='email' placeholder="Email" className="input input-bordered w-full max-w-xs mb-5 text-black" required /><br></br>
