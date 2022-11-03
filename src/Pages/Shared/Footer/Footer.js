@@ -4,7 +4,9 @@ import logo from "../../../assets/images/coursely.png"
 const Footer = () => {
     return (
         <div>
-            <footer className="footer p-10 bg-base-200 text-base-content">
+            <footer className="footer p-10 bg-base-200 text-black
+            border-t border-bg-base 
+            dark:bg-black dark:text-white">
   <div>
     <span className="footer-title">Services</span> 
     <Link className="link link-hover">Branding</Link> 
@@ -26,7 +28,7 @@ const Footer = () => {
     <Link className="link link-hover">Cookie policy</Link>
   </div>
 </footer> 
-<footer className="footer px-10 py-4 border-t bg-base-200 text-base-content border-base-300">
+<footer className="footer px-10 py-4 border-t bg-base-200 text-base-content  dark:bg-black dark:text-white">
   <div className="items-center grid-flow-col">
     <img src={logo} alt="" style={{width:'80px'}}/>
     <p>Coursely <br/>Providing quality education since 1999</p>
