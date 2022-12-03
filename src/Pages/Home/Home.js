@@ -1,5 +1,6 @@
 import React from 'react';
 import hero from "../../assets/images/hero.png"
+import LearnFromUs from './LearnFromUs';
 const Home = () => {
     return (
         <div>
@@ -13,7 +14,7 @@ const Home = () => {
                 <button className="btn bg-[#00b58b] border-none mt-4">Discover More</button>
             </div>
             </div>
-            
+            <LearnFromUs></LearnFromUs>
         </div>
     );
 };

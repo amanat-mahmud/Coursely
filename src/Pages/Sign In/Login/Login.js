@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { FaGithub } from 'react-icons/fa';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import googleImg from "../../../assets/images/google.png"
 import { AuthContext } from '../../../context/Auth/AuthProvider';
 const Login = () => {
@@ -20,6 +21,7 @@ const Login = () => {
         logInWithEmail(email,password)
         .then(res=>{setLoading(false);
             console.log(res.user);
+            toast.success("Login Successful");
         navigate(from,{replace:true})
         })
         .catch(error=>setError(error.message))

@@ -4,6 +4,7 @@ import React, { useContext } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import logo from '../../../assets/images/coursely.png';
 import { AuthContext } from '../../../context/Auth/AuthProvider';
+import { toast } from 'react-toastify';
 const Header = () => {
     const { isDark, setDark, user, logOut } = useContext(AuthContext);
     const navigate = useNavigate();
@@ -14,7 +15,9 @@ const Header = () => {
     const handleLogout = () => {
         // console.log("clicked");
         logOut()
-        .then()
+        .then(()=>{
+            isDark?toast.dark("Logged out"):toast.success("Logged Out")
+        })
         .catch()
     }
     const handleUserProfile = () =>{
