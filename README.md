@@ -2,7 +2,7 @@
 <h3 align="center">A passionate full stack web developer from Bangladesh</h3>
 👨‍💻 All of my projects are available at <a href="https://github.com/amanat-mahmud?tab=repositories">Repositories</a>
 <h4 align="left">
--<a href="https://coursely-client.web.app/">Coursely</a> - an online CSE educational course website.</h4>
+- <a href="https://coursely-client.web.app/">Coursely</a> - an online CSE educational course website.</h4>
 <ul><h3>📝 Site Features</h3>
 <li>Courses are organized category wise. You can see all courses in all categories or in courses page.Can see courses by category</li>
 <li>You can enroll courses you like.There is also a details page for every course.</li>
