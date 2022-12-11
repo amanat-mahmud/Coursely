@@ -12,7 +12,7 @@ const LearnFromUs = () => {
     const {isDark} = useContext(AuthContext)
     return (
         <div className='mb-20 mx-10'>
-            <h1 className='text-5xl font-bold mb-10'>Why learn from us?</h1>
+            <h1 className='text-5xl font-bold mb-10'>Benefits of learning from us</h1>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
             <LearnCard title={"Get Skilled"}
             description={"from thousands of quality courses.Designed by experts."}

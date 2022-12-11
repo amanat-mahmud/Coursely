@@ -1,11 +1,20 @@
 <h1 align="center">Hi 👋, I'm Amanat</h1>
 <h3 align="center">A passionate full stack web developer from Bangladesh</h3>
-
-<h3>👨‍💻 I’m currently working on
-<a href="https://coursely-client.web.app">Coursely</a><h3>
-<h2 align="left">📝Description:</h2>
+👨‍💻 All of my projects are available at [https://github.com/amanat-mahmud?tab=repositories](https://github.com/amanat-mahmud?tab=repositories)
 <p align="left">
-1.This is an online CSE educational course website.
+Coursely -an online CSE educational course website.</p>
+<ul><h3>📝 Site Features</h3>
+<li>Appealing home page with dynamic advertised route which is hidden when there are no items.</li>
+<li>Payment method(card) implemented</li>
+<li>Only 3 latest advertised items are shown on the home page.</li>
+<li>Categories and advertised page are only visible to buyers and admin.</li>
+<li>Dynamic dashboard based on logged user role.</li>
+<li>Admin can verify,delete user. Can also delete any reported item.</li>
+<li>Email/Password and google login are implemented with JWT verification and there is also admin verification.Private route is also implemented</li>
+<li>Seller can add product.Can also see his/her buyers.</li>
+</ul>
+<p align="left">
+1.This is 
 </p>
 <p align="left">
 2.In this website, you can enroll courses you like.You can search courses by category.There is also a details page for every course.
