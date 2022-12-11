@@ -3,7 +3,7 @@
 👨‍💻 All of my projects are available at [Repositories](https://github.com/amanat-mahmud?tab=repositories)
 
 <p align="left">
-Coursely -an online CSE educational course website.</p>
+[Coursely](https://coursely-client.web.app/) -an online CSE educational course website.</p>
 <ul><h3>📝 Site Features</h3>
 <li>Courses are organized category wise. You can see all courses in all categories or in courses page.Can see courses by category</li>
 <li>You can enroll courses you like.There is also a details page for every course.</li>
