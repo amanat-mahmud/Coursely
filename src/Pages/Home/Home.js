@@ -1,6 +1,7 @@
 import React from 'react';
 import hero from "../../assets/images/hero.png"
 import LearnFromUs from './LearnFromUs';
+import NewsLetter from './NewsLetter';
 import ReviewSection from './ReviewSection';
 import Upcoming from './Upcoming';
 const Home = () => {
@@ -21,6 +22,7 @@ const Home = () => {
             <div className='ml-10 mb-10'>
             <h1 className='text-5xl font-bold mb-10'>From Community</h1>
             <ReviewSection></ReviewSection>
+            {/* <NewsLetter></NewsLetter> */}
             </div>
         </div>
     );
