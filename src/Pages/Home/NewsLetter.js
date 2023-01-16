@@ -1,5 +1,5 @@
 import React from 'react';
-import { toast, ToastContainer } from 'react-toastify';
+import { toast } from 'react-toastify';
 import newsImage from '../../assets/images/news2.png';
 
 const NewsLetter = () => {
@@ -15,15 +15,19 @@ const NewsLetter = () => {
         </p>
         <div>
             <div class="mt-6 sm:flex justify-start">
-                <div class="flex flex-col justify-center w-3/4 max-w-sm space-y-3 md:flex-row md:w-full md:space-x-3 md:space-y-0" >
+                <form class="flex flex-col justify-center w-3/4 max-w-sm space-y-3 md:flex-row md:w-full md:space-x-3 md:space-y-0" onSubmit={(e)=>{
+                e.preventDefault() 
+                toast("Subscribed Successfully")
+                e.target.email.value = '';
+            }}>
                     <div class=" relative ">
-                        <input type="text" id="&quot;form-subscribe-Subscribe" class=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-[#00b58b] focus:border-transparent" placeholder="Email"/>
+                        <input type="text" id="&quot;form-subscribe-Subscribe" class=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-[#00b58b] focus:border-transparent" placeholder="Email" required name='email'/>
                         </div>
-                        <button class="btn font-semibold text-white bg-[#00b58b] rounded-lg shadow-md border-0  dark:hover:bg-white dark:hover:text-[#00b58b]" type="submit" onClick={()=>toast("Subscribed Successfully")}>
+                        <button class="btn font-semibold text-white bg-[#00b58b] rounded-lg shadow-md border-0  dark:hover:bg-white dark:hover:text-[#00b58b]" type="submit" >
                             Subscribe
                         </button>
                         
-                    </div>
+                    </form>
                 </div>
             </div>
             <div class="absolute inset-y-0 right-0 hidden lg:block lg:left-2/3 xl:left-1/2">

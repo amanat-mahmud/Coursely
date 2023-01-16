@@ -10,9 +10,12 @@ const UpcomingCard = () => {
                     <div className="avatar placeholder mr-2">
                         <div className="bg-neutral-focus text-neutral-content rounded-full w-12">
                             <img src="https://images.unsplash.com/photo-1585402627084-e80d83061b76?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" alt="" />
-                        </div>
+                        </div> 
                     </div>
-                    <p>Author Name</p>
+                    <div>
+                        <p>Author Name</p>
+                        <p>Author designation</p>
+                        </div>
                 </div>
                 <h2 className="card-title">Title</h2>
                 <p>Price</p>
