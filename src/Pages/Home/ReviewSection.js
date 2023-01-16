@@ -1,15 +1,14 @@
 import React from "react";
 import SingleReview from "./SingleReview";
-
 const ReviewSection = () => {
   return (
-    <section id="review" class="mx-5 mb-10">
+    <section id="review" class="me-5 mb-10">
       <div class="carousel w-full">
         {/* <!-- carousal 1 --> */}
         <div id="slide5" class="carousel-item relative w-full d-flex">
           {/* <!-- product info container--> */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 ">
-            <SingleReview></SingleReview>
+            <SingleReview reviewer={'Mikasa ackerman'} reviewerPic={"https://images.unsplash.com/photo-1664918696737-db7cf04d28b8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"} review={"A very nice watch. I was about to order a second one when I noticed that they have raised the price, and now I am waiting for it to drop. It may take longer, I am patient. Thumbs up!"}></SingleReview>
             <div class="review">
                         <img src="https://images.unsplash.com/photo-1564564244660-5d73c057f2d2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fG1hbiUyMGZhY2V8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
                             alt="" class="review-img" style={{width: "395px",
