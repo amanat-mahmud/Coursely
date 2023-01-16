@@ -3,7 +3,7 @@ import { RouterProvider } from 'react-router-dom';
 import './App.css';
 import { AuthContext } from './context/Auth/AuthProvider';
 import {route} from './Routes/Routes/Routes';
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 function App() {
   const {isDark} = useContext(AuthContext)
