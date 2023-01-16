@@ -1,6 +1,7 @@
 import React from 'react';
 
-const UpcomingCard = () => {
+const UpcomingCard = ({upcomingCourses}) => {
+    console.log(upcomingCourses);
     return (
         <div className="card card-compact w-96 bg-base-100 shadow-xl dark:bg-black border-white border-2 hover:border-[#00b58b]">
             <figure><img src="https://placeimg.com/400/225/arch" alt="Shoes" 
