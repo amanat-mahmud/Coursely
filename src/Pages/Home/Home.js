@@ -1,10 +1,13 @@
 import React from 'react';
+import { useLoaderData } from 'react-router-dom';
 import hero from "../../assets/images/hero.png"
 import LearnFromUs from './LearnFromUs';
 import NewsLetter from './NewsLetter';
 import ReviewSection from './ReviewSection';
 import Upcoming from './Upcoming';
 const Home = () => {
+    const upcomingCourses = useLoaderData();
+    // console.log(upcomingCourses);
     return (
         <div>
             <div className='sm:block lg:flex justify-items-center items-center mb-5 md:mb:0'>
@@ -18,7 +21,7 @@ const Home = () => {
             </div>
             </div>
             <LearnFromUs></LearnFromUs>
-            <Upcoming></Upcoming>
+            <Upcoming upcomingCourses={upcomingCourses}></Upcoming>
             <div className='ml-10 mb-10'>
             <h1 className='text-5xl font-bold mb-10'>From Community</h1>
             <ReviewSection></ReviewSection>

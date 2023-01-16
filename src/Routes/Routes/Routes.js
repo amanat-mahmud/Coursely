@@ -20,7 +20,7 @@ export const route = createBrowserRouter([
             {
                 path:'/',
                 element:<Home></Home>,
-                loader: ({params})=>fetch(`https://coursely-server.vercel.app/category/${params.id}`)
+                loader: ()=>fetch(`http://localhost:5000/upcomingcourses`)
             },
             {
                 path:'/courses',
