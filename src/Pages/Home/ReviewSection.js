@@ -2,45 +2,15 @@ import React from "react";
 import SingleReview from "./SingleReview";
 const ReviewSection = () => {
   return (
-    <section id="review" class="me-5 mb-10">
+    <section id="review" class="mr-5 mb-10">
       <div class="carousel w-full">
         {/* <!-- carousal 1 --> */}
         <div id="slide5" class="carousel-item relative w-full d-flex">
           {/* <!-- product info container--> */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 ">
             <SingleReview reviewer={'Mikasa ackerman'} reviewerPic={"https://images.unsplash.com/photo-1664918696737-db7cf04d28b8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"} review={"A very nice watch. I was about to order a second one when I noticed that they have raised the price, and now I am waiting for it to drop. It may take longer, I am patient. Thumbs up!"}></SingleReview>
-            <div class="review">
-                        <img src="https://images.unsplash.com/photo-1564564244660-5d73c057f2d2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fG1hbiUyMGZhY2V8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
-                            alt="" class="review-img" style={{width: "395px",
-                                height: "265px"}}/>
-                        <p class="text-center font-bold text-xl">Izumi Akazawa</p>
-                        <div class="text-center">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                        </div>
-                        <p>This is an impressive watch for the price. Who knows if the diamond chip is really a diamond
-                            chip? I think I'd prefer a gold tone band -- the black face is large and stark against the
-                            silver. There are gold elements in the band, but they don't really stand out. The watch
-                            arrived working. It's in a standard looking watch box.</p>
-                    </div>
-                    <div class="review">
-                        <img src="https://images.unsplash.com/photo-1564564295391-7f24f26f568b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDl8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
-                            alt="" class="review-img" style={{ width: "395px", height: "265px" }}/>
-                        <p class="text-center font-bold text-xl">Milly</p>
-                        <div class="text-center">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                        </div>
-                        <p>Honestly the device was amazing.. unfortunately I received one of many defective units.. the
-                            device was having issues with the sound crackling after my 3rd day of use. I've researched
-                            the issue and found that it's unfortunately common on these S22Ultras so I've returned the
-                            device and I look forward to ordering a new one once I complete my return</p>
-                    </div>
+            <SingleReview reviewer={'Izumi Akazawa'} reviewerPic={"https://images.unsplash.com/photo-1564564244660-5d73c057f2d2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fG1hbiUyMGZhY2V8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"} review={"This is an impressive watch for the price. Who knows if the diamond chip is really a diamond chip? I think I'd prefer a gold tone band -- the black face is large and stark against the silver. There are gold elements in the band, but they don't really stand out. The watch arrived working. It's in a standard looking watch box."}></SingleReview>
+            <SingleReview reviewer={'Milly Brown'} reviewerPic={"https://images.unsplash.com/photo-1564564295391-7f24f26f568b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDl8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"} review={"Honestly the device was amazing.. unfortunately I received one of many defective units.. the device was having issues with the sound crackling after my 3rd day of use. I've researched the issue and found that it's unfortunately common on these S22Ultras so I've returned the device and I look forward to ordering a new one once I complete my return."}></SingleReview>
           </div>
           
           {/* <!-- carousal button --> */}
