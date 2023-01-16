@@ -8,7 +8,7 @@ const Course = ({course}) => {
             <div className="card card-compact w-96 bg-base-100 shadow-xl m-0
             border border-white mx-auto" style={{height:'432px'}}>
                 {/* Course image */}
-                <figure><img src={course.img} alt="Shoes" style={{width:'380px',height:'220px'}}/></figure>
+                <figure><img src={course.img} alt="Course" style={{width:'380px',height:'220px'}}/></figure>
                 <div className="card-body dark:bg-black " >
                     {/* Course title */}
                     <h2 className="card-title">{course.title}</h2>
