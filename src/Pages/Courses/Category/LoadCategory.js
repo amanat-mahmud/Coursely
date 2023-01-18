@@ -18,13 +18,17 @@ const LoadCategory = () => {
         }
     });
     return (
-        <div>
+        <div className='mt-5'>
                 {/* all categories is not in the db that's why created separately */}
-                <NavLink to='/courses'><p className='dark:bg-black p-5 m-5 text-center text-2xl border-black dark:border-white border dark:text-white font-bold hover:bg-[#00b58b] hover:border-[#00b58b] hover:text-white'>All categories</p></NavLink>
-                {/* category names are setted to the side nav */}
-            {
-                allCategory.map((cat,idx)=><NavLink to={`/category/${idx+1}`} key={idx}><p className='dark:bg-black p-5 m-5 text-center text-2xl border-black dark:border-white border dark:text-white font-bold' key={idx} >{cat}</p></NavLink>)
-            }
+                <NavLink to='/courses' className={({ isActive }) => isActive ?
+                'p-5 m-5 text-center text-2xl font-bold text-white bg-[#00b58b]  hover:text-black block':'block dark:bg-black p-5 m-5 text-center text-2xl border-black dark:border-white border dark:text-white font-bold hover:bg-[#00b58b] hover:border-[#00b58b] hover:text-white dark:hover:bg-[#00b58b] dark:hover:border-[#00b58b]'}>All categories</NavLink>
+                {/* category names are set to the side nav */}
+                <div>
+                    {
+                        allCategory.map((cat,idx)=><NavLink to={`/category/${idx+1}`} key={idx} className={({ isActive }) => isActive ?
+                        'p-5 m-5 text-center text-2xl font-bold text-white bg-[#00b58b]  hover:text-black block':'dark:bg-black p-5 m-5 text-center text-2xl border-black dark:border-white border dark:text-white font-bold hover:bg-[#00b58b] hover:border-[#00b58b] hover:text-white block dark:hover:bg-[#00b58b] dark:hover:border-[#00b58b]'}>{cat}</NavLink>)
+                    }
+                </div>
         </div>
     );
 };
