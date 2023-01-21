@@ -60,7 +60,8 @@ const Header = () => {
                         {
                             user?.photoURL ? <><li className='mr-1'><NavLink className="btn border-solid bg-white  text-[#00b58b]  border-[#00b58b] hover:border-solid hover:text-white hover:bg-[#00b58b] hover:border-[#00b58b] dark:border-none" onClick={handleLogout}>Log out</NavLink></li></> : <> <li className='mr-1'><NavLink to="/login" className={({ isActive }) =>
                                     isActive ? "bg-black text-white dark:bg-white dark:text-black " : undefined}>Log in</NavLink></li>
-                                <li className='mr-1'><NavLink to='/register' className={({ isActive }) => isActive ? "btn border-solid bg-white  text-[#00b58b]  border-[#00b58b] hover:border-solid hover:text-white hover:bg-[#00b58b] hover:border-[#00b58b] dark:border-none" : "btn bg-[#00b58b] border-solid border-white hover:bg-white text-white hover:text-[#00b58b]  hover:border-[#00b58b] hover:border-solid dark:border-none"}>Register</NavLink></li></>
+                                <li className='mr-1'><NavLink to='/register' className={({ isActive }) => isActive ? "btn bg-[#00b58b] border-solid border-white hover:bg-white text-white hover:text-[#00b58b]  hover:border-[#00b58b] hover:border-solid dark:border-none" : "btn border-solid bg-white  text-[#00b58b]  border-[#00b58b] hover:border-solid hover:text-white hover:bg-[#00b58b] hover:border-[#00b58b] dark:border-none"}>Register</NavLink></li></>
+
                         }
                     </ul>
                 </div>

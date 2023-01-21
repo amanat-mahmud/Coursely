@@ -1,36 +1,61 @@
 import React from "react";
-import Pdf from "react-to-pdf";
+// import Pdf from "react-to-pdf";
 import { Link, useLoaderData } from 'react-router-dom';
 import { FaStar, FaUserAlt, FaAngleRight, FaStop } from 'react-icons/fa';
-const ref = React.createRef();
-const options = {
-    orientation: 'landscape',
-    unit: 'in',
-    format: [15,15]
-};
+// import { useRef } from "react";
+// import html2canvas from 'html2canvas';
+// import { jsPDF } from 'jspdf';
+import pdf from "../../assets/pdf/Course-Outline.pdf"
+// const ref = React.createRef();
+// const options = {
+//     orientation: 'landscape',
+//     unit: 'in',
+//     format: [15,15]
+// };
 const SingleCourse = () => {
+    // const printRef = useRef();
     const course = useLoaderData();
     // console.log(course);
     // const handlePdfDown = () =>{
     //     console.log("clicked");
     // }
+    const handleDownloadPdf = async () => {
+        // const element = printRef.current;
+        // const canvas = await html2canvas(element);
+        // const data = canvas.toDataURL('image/png');
+    
+        // const pdf = new jsPDF();
+        // const imgProperties = pdf.getImageProperties(data);
+        // const pdfWidth = pdf.internal.pageSize.getWidth();
+        // const pdfHeight =
+        //   (imgProperties.height * pdfWidth) / imgProperties.width;
+        // console.log(pdfWidth,pdfHeight);
+        // pdf.addImage(data, 'PNG', 0, 0, pdfWidth, pdfHeight);
+        // pdf.save(`${course.title}.pdf`);
+        // var fileDownload = require('js-file-download');
+        // fileDownload(pdf,'Course-Outline.pdf');
+      };
     return (
-        <div>
+        <div >
             {/* <div className='grid grid-cols-1 md:grid-cols-2 md:gap-4'> */}
             {/* <div className='grid-cols-1 ml-10'> */}
             <div className='mx-10'>
                 <div>
                     <div>
-                        <Pdf targetRef={ref} filename="Course-Outline.pdf" options={options} >
+                        {/* <Pdf targetRef={ref} filename="Course-Outline.pdf" options={options} >
                             {({ toPdf }) => <p className='text-center my-3'><span className='text-2xl '>
                                 Download course outline <button className='btn dark:bg-white dark:text-black hover:text-white dark:hover:bg-black dark:hover:text-white  border-none bg-black text-white hover:bg-slate-400' onClick={toPdf}>Download pdf</button></span></p>}
-                        </Pdf>
+                        </Pdf> */}
+                        <p className='text-center my-3'><span className='text-2xl '>
+                                Download course outline <button className='btn dark:bg-white dark:text-black hover:text-white dark:hover:bg-black dark:hover:text-white  border-none bg-black text-white hover:bg-slate-400' onClick={handleDownloadPdf}>Download pdf</button></span></p>
+                        {/*  */}
                     </div>
                     {/* <p className='text-center my-3'><span className='text-2xl '>
                     Download course outline <button className='btn dark:bg-white dark:text-black hover:text-white dark:hover:bg-black dark:hover:text-white  border-none bg-black text-white hover:bg-slate-400' onClick={handlePdfDown}>Download pdf</button>
                     </span>
                     </p> */}
-                    <div ref={ref}>
+                    {/* ref={ref} ref={printRef}*/}
+                    <div >
                         <img src={course.img} alt="" className='w-full' />
                         <div className='flex justify-items-center items-center mt-3 w-1/3 md:mx-auto'>
                             <img src={course.author_img} alt="" className='w-20' style={{
